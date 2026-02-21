@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #eaeaea;
+    align-items: center;
+}
+
+
+/* Центрирование */
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+    align-items: center;
+}
+
+/* Две колонки */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Картинка */
+.image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* Текст */
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #eaeaea;
+    align-items: center;
+   
+}
+
+box2{
+  display: block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+
+box2 h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  
+}
+
+box2 p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  box2 h2 {
+    font-size: 24px;
+  }
+
+  box2 p {
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+#toptop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 999;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* При наведении */
+#toptop:hover {
+  background-color: #6a00ff;
+  transform: translateY(-3px);
+}
+#BOT{
+ position: fixed;
+  left: 25;
+bottom: 25px;
+  width: 40px;
+  height: 40px;
+
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 999;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+
+
+
+}
+
+
+.tg-btn{
+background-color: #ff4d6d;
+color: wheat;
+padding: 12px 24px;
+border-radius: 30px;
+font-weight: bold;
+transition: 0.3s;
+animation: pulse 1.5 infinite;
+
+}
+
+.tg-btn:hover{
+background-color: #e63950;
+transform: scale(1.08);
+}
+
+a{
+color: #ccc;
+font-size: 14px;
+text-decoration: none;
+font-family: Robotoital;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba (255, 77, 109, 0.6);}
+  70% {box-shadow: 0 0 0 15px rgba(255, 77, 109, 0);}
+  100% {box-shadow: 0 0 0 0 rgba(255, 77, 109, 0);}
+
+  
+}
+
+box2 {
+    display: block;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+box2.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pulse 0.6s ease-in-out 1; /* мягкая пульсация один раз */
+}
+
+@keyframes pulse {
+    0%   { transform: translateY(0) scale(0.97); }
+    50%  { transform: translateY(0) scale(1.03); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+#BOT {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#BOT.show {
+    opacity: 1;
+}
